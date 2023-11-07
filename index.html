@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Toc-Toe Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+    <h1>Tic-Toc-Toe Game</h1>
+    <hr>
+    <div class="box">
+      <div>
+        <label for="player1">X</label>
+        <input type="text" id="player1" placeholder="Player 1">
+      </div>
+      <div>
+        <label for="player2">O</label>
+        <input type="text" id="player2" placeholder="Player 2">
+      </div>
+      <br>
+      <button on-click="confirmation()" id="start">Começar!</button>
+    </div>
+
+  <hr>
+
+  <h2>Round: <span id="turnPlayer"></span></h2>
+  <section id="gameBoard">
+    <span class="cursor-pointer" data-region="0"></span>
+    <span class="cursor-pointer" data-region="1"></span>
+    <span class="cursor-pointer" data-region="2"></span>
+    <span class="cursor-pointer" data-region="3"></span>
+    <span class="cursor-pointer" data-region="4"></span>
+    <span class="cursor-pointer" data-region="5"></span>
+    <span class="cursor-pointer" data-region="6"></span>
+    <span class="cursor-pointer" data-region="7"></span>
+    <span class="cursor-pointer" data-region="8"></span>
+  </section>
+</body>
+</html>
