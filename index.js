@@ -80,8 +80,6 @@ const inputPlayers = (ev) => {
     console.clear()
     disableRegion(ev.currentTarget)
 
-    turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
-
     const winRegions = checkWinner(board[region])
 
     console.log(winRegions)
@@ -89,25 +87,27 @@ const inputPlayers = (ev) => {
     if (winRegions.length > 0) {
         paintBoard(winRegions)
     } else if (board.every((value) => value === '')) {
-        // turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
         updateTitle()
     } else {
         document.querySelector('h2').innerHTML = 'Tie'
     }
 
+    turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
 }
 
 
 const startGame = () => {
     const player1Name = document.getElementById('player1Name').value
-
-    if (turnPlayer === 'player2') {
-        document.getElementById('turnPlayer').innerText = player1Name
-    }
-
-    document.querySelector('h2').innerHTML = 'Round: <span id="turnPlayer">Player 1</span>'
+    // const player2Name = document.getElementById('player2Name').value
 
     document.getElementById('turnPlayer').innerText = player1Name
+    document.querySelector('h2').innerHTML = 'Round: <span id="turnPlayer">Player 1</span>'
+
+
+
+    // if (turnPlayer === 'player2') {
+    //     document.getElementById('turnPlayer').innerText = player2Name
+    // }
 
     updateTitle()
 
