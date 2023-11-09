@@ -19,6 +19,7 @@ const updateTitle = () => {
 const disableRegion = (element) => {
     element.classList.remove('cursor-pointer')
     element.removeEventListener('click', inputPlayers)
+    document.getElementById('turnPlayer').innerText = 'player1'
 }
 
 
