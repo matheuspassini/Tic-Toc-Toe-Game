@@ -19,7 +19,7 @@ const updateTitle = () => {
 const disableRegion = (element) => {
     element.classList.remove('cursor-pointer')
     element.removeEventListener('click', inputPlayers)
-    document.getElementById('turnPlayer').innerText = 'player1'
+    turnPlayer = 'player1'
 }
 
 
@@ -51,6 +51,8 @@ const checkWinner = (symbol) => {
         winRegions.push(2,5,8)
      }
 
+     turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
+
      return winRegions
 }
 
@@ -58,8 +60,6 @@ const paintBoard = (regions) => {
     regions.forEach((region) => {
         document.querySelector(`[data-region="${region}"]`).classList.add('win')
     })
-    // const playerNameElement = document.getElementById('turnPlayer')
-    // console.log(playerNameElement) // Verifique se o elemento está sendo encontrado corretamente
     const playerName = document.getElementById('turnPlayer').innerText
     document.querySelector('h2').innerHTML = playerName + ' won!'
 }
