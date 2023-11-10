@@ -1,3 +1,5 @@
+<img src="https://github.com/matheuspassini/Tic-Toc-Toe-Game/images/background.jpeg">
+
 # Tic Tac Toe Game
 
 Welcome to the Tic Tac Toe game repository! This JavaScript project allows you to play the classic Tic Tac Toe game in your web browser. It's a simple and fun two-player game where users take turns to make their moves on a 3x3 grid.
