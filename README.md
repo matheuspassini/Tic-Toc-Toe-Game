@@ -1,4 +1,4 @@
-<img src="https://github.com/matheuspassini/Tic-Toc-Toe-Game/images/background.jpeg">
+<img src="https://github.com/matheuspassini/Tic-Toc-Toe-Game/blob/main/images/background.jpeg">
 
 # Tic Tac Toe Game
 
