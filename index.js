@@ -2,6 +2,7 @@
 // 3 4 5
 // 6 7 8
 
+
 const btn = document.getElementById('start')
 const boardRegions = document.querySelectorAll('#gameBoard span')
 
@@ -11,7 +12,6 @@ let board = ['', '', '', '', '', '', '', '', '']
 
 
 const startGame = () => {
-
     turnPlayer = 'player1'
     document.querySelector('h2').innerHTML = 'Round: <span id="turnPlayer"></span>'
     updateTitle()
@@ -28,7 +28,10 @@ const startGame = () => {
 const updateTitle = () => {
     const playerNameElement = document.getElementById(turnPlayer)
     console.log(playerNameElement)
-    document.getElementById('turnPlayer').innerText = playerNameElement.innerText
+    if (playerNameElement) {
+        document.getElementById('turnPlayer').innerText = playerNameElement.value
+    }
+
 }
 
 const disableRegion = (element) => {
