@@ -10,10 +10,25 @@ let turnPlayer = ''
 let board = ['', '', '', '', '', '', '', '', '']
 
 
+const startGame = () => {
+
+    turnPlayer = 'player1'
+    document.querySelector('h2').innerHTML = 'Round: <span id="turnPlayer"></span>'
+    updateTitle()
+
+    boardRegions.forEach(function (element) {
+        element.classList.remove('win')
+        element.innerText = ''
+        element.classList.add('cursor-pointer')
+        element.addEventListener('click', inputPlayers)
+    })
+}
+
+
 const updateTitle = () => {
-    const playerNameElement = document.getElementById('turnPlayer')
+    const playerNameElement = document.getElementById(turnPlayer)
     console.log(playerNameElement)
-    document.getElementById('turnPlayer').innerText = playerNameElement.value
+    document.getElementById('turnPlayer').innerText = playerNameElement.innerText
 }
 
 const disableRegion = (element) => {
@@ -95,28 +110,5 @@ const inputPlayers = (ev) => {
     turnPlayer = turnPlayer === 'player1' ? 'player2' : 'player1'
 }
 
-
-const startGame = () => {
-    const player1Name = document.getElementById('player1Name').value
-    // const player2Name = document.getElementById('player2Name').value
-
-    document.getElementById('turnPlayer').innerText = player1Name
-    document.querySelector('h2').innerHTML = 'Round: <span id="turnPlayer">Player 1</span>'
-
-
-
-    // if (turnPlayer === 'player2') {
-    //     document.getElementById('turnPlayer').innerText = player2Name
-    // }
-
-    updateTitle()
-
-    boardRegions.forEach(function (element) {
-        element.classList.remove('win')
-        element.innerText = ''
-        element.classList.add('cursor-pointer')
-        element.addEventListener('click', inputPlayers)
-    })
-}
 
 btn.addEventListener('click', startGame)
