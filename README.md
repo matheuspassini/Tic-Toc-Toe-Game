@@ -16,7 +16,7 @@ Welcome to the Tic Tac Toe game repository! This JavaScript project allows you t
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone hhttps://github.com/matheuspassini/Tic-Toc-Toe-Game.git
+    git clone https://github.com/matheuspassini/Tic-Toc-Toe-Game.git
     ```
 
 2. Open `index.html` in your preferred web browser.
